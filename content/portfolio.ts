@@ -23,7 +23,7 @@ export const portfolioItems: PortfolioItem[] = [
       "Video profil dan versi pendek untuk kampanye penerimaan murid baru.",
     outcome:
       "Lebih dari 1.200 pendaftar pada gelombang pertama setelah kampanye.",
-    accent: "bg-[#0f7b5f]",
+    accent: "bg-[#1a9be4]",
     placeholder: true,
   },
   {
