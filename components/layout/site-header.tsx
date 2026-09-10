@@ -54,7 +54,7 @@ export function SiteHeader() {
           href="/"
           className="flex items-center"
         >
-          <img src="/logo-doang.png" alt={site.name} className="size-10" />
+          <img src="/logo-doang.png" alt={site.name} className="h-10 w-auto object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

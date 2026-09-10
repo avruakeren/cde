@@ -5,10 +5,11 @@ import { ArrowRight } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { SplitTextHeading } from "@/components/ui/split-text-heading";
 import { ScrambleText } from "@/components/ui/scramble-text";
+import { SonarGrid } from "@/components/ui/sonar-grid";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <SonarGrid className="overflow-hidden" pingArea={[0.2, 0.15, 0.8, 0.85]}>
       <div className="mx-auto flex min-h-[100dvh] max-w-6xl flex-col justify-center px-5 pb-16 pt-24 sm:px-8">
         <div className="grid items-end gap-10 lg:grid-cols-[1.6fr_1fr]">
           <motion.div
@@ -56,6 +57,6 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute -right-16 top-1/2 hidden h-40 w-40 -translate-y-1/2 rounded-full bg-accent/20 blur-2xl lg:block"
       />
-    </section>
+    </SonarGrid>
   );
 }
