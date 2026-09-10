@@ -54,9 +54,7 @@ export function SiteHeader() {
           href="/"
           className="flex items-center"
         >
-          <span className="relative size-10 flex-shrink-0 overflow-hidden">
-            <img src="/logo-real.png" alt={site.name} className="absolute inset-0 w-full h-full object-cover scale-[2.5]" />
-          </span>
+          <img src="/logo-doang.png" alt={site.name} className="size-10" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
