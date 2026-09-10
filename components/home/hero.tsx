@@ -5,12 +5,17 @@ import { ArrowRight } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { SplitTextHeading } from "@/components/ui/split-text-heading";
 import { ScrambleText } from "@/components/ui/scramble-text";
-import { SonarGrid } from "@/components/ui/sonar-grid";
+import Auralis from "@/components/ui/auralis";
 
 export function Hero() {
   return (
-    <SonarGrid className="overflow-hidden" pingArea={[0.2, 0.15, 0.8, 0.85]}>
-      <div className="mx-auto flex min-h-[100dvh] max-w-6xl flex-col justify-center px-5 pb-16 pt-24 sm:px-8">
+    <section className="relative overflow-hidden">
+      <Auralis
+        height="100%"
+        className="absolute inset-0"
+        colors={["#1a9be4", "#2eaef2", "#0c7ab8"]}
+      />
+      <div className="relative z-10 mx-auto flex min-h-[100dvh] max-w-6xl flex-col justify-center px-5 pb-16 pt-24 sm:px-8">
         <div className="grid items-end gap-10 lg:grid-cols-[1.6fr_1fr]">
           <motion.div
             initial={{ opacity: 0, y: 32 }}
@@ -21,7 +26,7 @@ export function Hero() {
               <span className="size-1.5 rounded-full bg-accent" />
               <ScrambleText text="Agensi digital untuk pendidikan" />
             </p>
-            <SplitTextHeading className="font-display text-4xl font-semibold leading-[1.15] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            <SplitTextHeading className="font-display text-4xl font-semibold leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-6xl">
               Membantu sekolah dan kampus hadir lebih profesional di era digital.
             </SplitTextHeading>
           </motion.div>
@@ -32,7 +37,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-start gap-8"
           >
-            <p className="max-w-sm text-base leading-relaxed text-muted">
+            <p className="max-w-sm text-base leading-relaxed text-white/70">
               Video profil, website sekolah, jurnal digital, dan pendampingan
               teknologi untuk lembaga pendidikan.
             </p>
@@ -41,7 +46,12 @@ export function Hero() {
                 Konsultasi Gratis
                 <ArrowRight size={18} weight="bold" />
               </Button>
-              <Button href="/portofolio" variant="outline" size="lg">
+              <Button
+                href="/portofolio"
+                variant="outline"
+                size="lg"
+                className="border-white/25 text-white hover:border-white hover:bg-white/10"
+              >
                 Lihat Karya
               </Button>
             </div>
@@ -57,6 +67,6 @@ export function Hero() {
         aria-hidden
         className="pointer-events-none absolute -right-16 top-1/2 hidden h-40 w-40 -translate-y-1/2 rounded-full bg-accent/20 blur-2xl lg:block"
       />
-    </SonarGrid>
+    </section>
   );
 }
